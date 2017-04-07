@@ -1,0 +1,55 @@
+<RCC>
+  <qresource prefix="devices">
+    <file>icons/macro_mode.png</file>
+    <file>icons/obs_out_dw.png</file>
+    <file>icons/laser_in.png</file>
+    <file>icons/sps_closed.png</file>
+    <file>icons/shutter_open.png</file>
+    <file>icons/x-ray.png</file>
+    <file>icons/diode_reverse_open_disabled.png</file>
+    <file>icons/expert_mode.png</file>
+    <file>icons/ic_remove_red_eye_black_24dp.png</file>
+    <file>icons/revolver.png</file>
+    <file>icons/wall.png</file>
+    <file>icons/pinhole.png</file>
+    <file>icons/diode_open.png</file>
+    <file>icons/beamstop.png</file>
+    <file>icons/edit.png</file>
+    <file>icons/microscope_closed.png</file>
+    <file>icons/diode_reverse_closed.png</file>
+    <file>icons/stage.png</file>
+    <file>icons/ion_chamber.png</file>
+    <file>icons/ic_tune_black_24dp.png</file>
+    <file>icons/shutter_closed.png</file>
+    <file>icons/slits.png</file>
+    <file>icons/obs_closed_dw.png</file>
+    <file>icons/sps_open.png</file>
+    <file>icons/export.png</file>
+    <file>icons/add.png</file>
+    <file>icons/mgrp.png</file>
+    <file>icons/obs_open_up.png</file>
+    <file>icons/obs_closed_up.png</file>
+    <file>icons/obs_in_up.png</file>
+    <file>icons/microscope_disabled.png</file>
+    <file>icons/diode_closed.png</file>
+    <file>icons/optics.png</file>
+    <file>icons/obs_out_up.png</file>
+    <file>icons/camera.png</file>
+    <file>icons/microscope_open.png</file>
+    <file>icons/counter.png</file>
+    <file>icons/diode_reverse_open.png</file>
+    <file>icons/positions.png</file>
+    <file>icons/obs_in_dw.png</file>
+    <file>icons/diode_open_disabled.png</file>
+    <file>icons/laser_out.png</file>
+    <file>icons/obs_open_dw.png</file>
+    <file>icons/beam.png</file>
+    <file>icons/detector.png</file>
+    <file>icons/keithley.png</file>
+    <file>icons/LH_table.png</file>
+    <file>icons/GP_table.png</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>splash/splash_beamline_stack.png</file>
+  </qresource>
+</RCC>

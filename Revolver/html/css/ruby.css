@@ -1,0 +1,24 @@
+/* author: K. Glazyrin
+ Style for ruby correction widget
+*/
+
+ noscript div {background-color: #ccc;}
+ input {border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; border: 1px solid #ccc; padding: 2px; padding-left: 10px;}
+ select {border: 1px solid #ccc; font-family: Arial; width: 165px;}
+
+ #ruby { margin-top: 10px;}
+ #ruby .table_worker {background-color: #eee;border-radius:3px; -webkit-border-radius:3px; -moz-border-radius:3px; border: 1px solid #ccc; padding: 10px;}
+ #ruby .table_worker td {padding: 10px; text-align: left; vertical-align:middle;}
+ #ruby .button {padding-top: 5px; padding-bottom: 5px; padding-left:10px; padding-right:10px;  border-radius:3px; -moz-border-radius:3px; cursor: hand; font-family: Georgia; cursor: pointer;}
+
+ #ruby .button_static { background-color: #f4ff81; color: #333;}
+ #ruby .button_over { background-color: #aeea00; color: #fff;}
+ #ruby #ruby_btn_p:active { background-color: #f4ff81; color: #777;}
+
+ #ruby .ruby_rc {width: 200px; vertical-align: middle; overflow:hidden; color: #AA0000;  font-size: 30px;}
+ #ruby .ruby_rc_td {background-color: #fff;border-radius:3px; -webkit-border-radius:3; -moz-border-radius:3px; font-family: sans-serif;}
+ #ruby h1 {font-size: 16px; font-weight: bold;}
+ #ruby .table_footer {padding: 10px; margin-top: 2px;}
+ #ruby .table_footer td {padding: 3px; vertical-align:middle;}
+ #ruby .result {font-size: 16px; font-weight: bold; color: #a00;}
+

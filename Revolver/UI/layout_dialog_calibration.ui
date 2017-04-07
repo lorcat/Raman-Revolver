@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>268</width>
+    <height>187</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calibrate Motor Positions</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="2">
+    <widget class="QDoubleSpinBox" name="dsb_rby">
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Motor Position to be set as current</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <widget class="QDoubleSpinBox" name="dsb_rbx">
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Motor Position to be set as current</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QPushButton" name="btn_rbz">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Calibrate Motor Position</string>
+     </property>
+     <property name="text">
+      <string>RBZ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="4">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="4" column="2">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <widget class="QPushButton" name="btn_rbx">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Calibrate Motor Position</string>
+     </property>
+     <property name="text">
+      <string>RBX</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="5">
+    <widget class="QLabel" name="label">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="text">
+      <string>Calibrate Motor positions (Sardana+Tango).</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QDoubleSpinBox" name="dsb_rbz">
+     <property name="minimumSize">
+      <size>
+       <width>100</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Motor Position to be set as current</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="decimals">
+      <number>4</number>
+     </property>
+     <property name="minimum">
+      <double>-100.000000000000000</double>
+     </property>
+     <property name="maximum">
+      <double>100.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QPushButton" name="btn_rby">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Calibrate Motor Position</string>
+     </property>
+     <property name="text">
+      <string>RBY</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="3">
+    <widget class="QPushButton" name="btn_rbx_zero">
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Calibrate Motor Position to 0</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QPushButton" name="btn_rby_zero">
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Calibrate Motor Position to 0</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="3">
+    <widget class="QPushButton" name="btn_rbz_zero">
+     <property name="maximumSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+     <property name="toolTip">
+      <string>Calibrate Motor Position to 0</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>btn_rbx</tabstop>
+  <tabstop>dsb_rbx</tabstop>
+  <tabstop>btn_rbx_zero</tabstop>
+  <tabstop>btn_rby</tabstop>
+  <tabstop>dsb_rby</tabstop>
+  <tabstop>btn_rby_zero</tabstop>
+  <tabstop>btn_rbz</tabstop>
+  <tabstop>dsb_rbz</tabstop>
+  <tabstop>btn_rbz_zero</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_rbx</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>actionSetRBX()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>63</x>
+     <y>66</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>91</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rby</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>actionSetRBY()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>101</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>151</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rbz</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>actionSetRBZ()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>131</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>34</x>
+     <y>0</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rbx_zero</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>actionRBXzero()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>217</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>176</x>
+     <y>-8</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rby_zero</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>actionRBYzero()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>226</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>182</x>
+     <y>-16</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_rbz_zero</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>actionRBZzero()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>216</x>
+     <y>132</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>-11</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>actionSetRBX()</slot>
+  <slot>actionSetRBY()</slot>
+  <slot>actionSetRBZ()</slot>
+  <slot>actionRBXzero()</slot>
+  <slot>actionRBYzero()</slot>
+  <slot>actionRBZzero()</slot>
+ </slots>
+</ui>

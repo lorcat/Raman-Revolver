@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Offline Ruby System Calculator</title>
+    <meta name="author" content="Konstantin Glazyrin">
+
+    <script src="script/jquery.min.js"></script>
+    <script src="script/qt.js"></script>
+    <script src="script/ruby.js"></script>
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/ruby.css">
+<script>
+    function on_load(){
+        initialize_rb(".rb_holder");
+    }
+</script>
+
+</head>
+<body onload="on_load()">
+
+    <div class="rb_holder">
+    </div>
+    <a onclick="ExtQt.test()" style="color:#fff; cursor:pointer;">Test</a>
+</div>
+</body>
+</html>

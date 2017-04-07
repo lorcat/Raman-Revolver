@@ -1,0 +1,39 @@
+/* --------------------------------------------------------
+Style Sheet for P02.2 Offline Ruby application
+
+version: 1.0
+last modified: -
+author: Konstantin Glazyrin
+email: konstantin.glazyrin@desy.de
+----------------------------------------------------------*/
+
+
+body {
+	font-size: 14px; color: #000; font-family: Tahome, Droid Sans; font-weight:bolder;
+	}
+
+input {padding: 3px 5px 3px 5px}
+
+a {cursor: pointer; color: #700;}
+a:hover {color: #C00;}
+
+.right {float:right;}
+.left {float:left;}
+
+
+/* Button style*/
+div.button {margin: 3px; padding: 1px; border:1px; cursor: pointer; background-color: #f4ff81; border-radius: 5px; height: 25px; color: #111; text-align: center;}
+div.button span {display: inline-block; line-height: 25px; padding: 0px 5px 0px 5px; font-weight: bolder; }
+div.button:hover {background-color: #aeea00; color: #fff;}
+div.button:active {background-color: #f4ff81; color: #ccc;}
+
+div.dang_button {margin: 3px; padding: 1px; border:1px; cursor: pointer; background-color: #EF9A9A; border-radius: 5px; height: 25px; color: #111; text-align: center;}
+div.dang_button span {display: inline-block; line-height: 25px; padding: 0px 5px 0px 5px; font-weight: bolder; }
+div.dang_button:hover {background-color: #D50000; color: #fff;}
+div.dang_button:active {background-color: #EF5350; color: #ccc;}
+
+/*macro output styles*/
+.output {font-family: Tahoma; font-size: 12px;}
+.macro_error {color: #a33; }
+.macro_info {color: #33a;}
+.macro_output {color: #333;}

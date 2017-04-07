@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Offline Ruby System Calculator</title>
+    <meta name="author" content="Konstantin Glazyrin">
+
+    <script src="script/jquery.min.js"></script>
+    <script src="script/qt.js"></script>
+    <script src="script/positions.js"></script>
+
+    <link rel="stylesheet" href="css/default.css">
+<script>
+    function on_load(){
+    }
+</script>
+
+</head>
+<body onload="on_load()">
+
+    <div class="pos_holder">
+        <table>
+            <tr><td title="Name of position to save or recover">Name of position:<td title="Name of position to save or recover"><input class="posname" type="text" value="dummy"><td>
+                <!-- Button -->
+                <div class="button left" onclick="ExtPos.moveto();" title="Move Offline Raman or Rb system motors to the saved positions">
+                    <span>Move To</span>
+                </div>
+                <!-- Button -->
+                <div class="button left" onclick="ExtPos.showpos();" title="Show information on the specified position">
+                    <span>Show Pos.</span>
+                </div>
+                <!-- Button -->
+                <div class="button left" onclick="ExtPos.lspos();" title="Show a list with saved positions">
+                    <span>List Pos.</span>
+                </div>
+            <td>
+                <!-- Button -->
+                <div class="dang_button left" onclick="ExtPos.cleanpos();" title="Deletes all saved positions">
+                    <span>Clean Positions</span>
+                </div>
+
+            <tr><td><td><td>
+                <!-- Button -->
+                <div class="button left" onclick="ExtPos.savepos();" title="Save position">
+                    <span>Save</span>
+                </div>
+                <!-- Button -->
+                <div class="button left" onclick="ExtPos.copyrb();" title="Save position to Ruby system">
+                    <span>Copy to Rb</span>
+                </div>
+                <!-- Button -->
+                <div class="button left" onclick="ExtPos.copygp();" title="Save position and copy its coordinates to the GP table">
+                    <span>Copy to GP</span>
+                </div>
+                <!-- Button -->
+                <div class="button left"  onclick="ExtPos.copylh();" title="Save position and copy its coordinates to the LH table">
+                    <span>Copy to LH</span>
+                </div>
+        </table>
+    </div>
+
+    <!-- field to fill for the macro server response -->
+    <div class="macro_response">
+        <div class="output">
+
+            <pre class="macro_output">
+            </pre>
+        </div>
+        <div class="output">
+
+            <pre class="macro_info">
+            </pre>
+        </div>
+        <div class="output">
+            <pre class="macro_error">
+            </pre>
+        </div>
+    </div>
+    <a onclick="ExtQt.test()" style="color:#fff; cursor:pointer;">Test</a>
+</body>
+</html>
