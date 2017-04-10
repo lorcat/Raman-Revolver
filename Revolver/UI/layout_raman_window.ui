@@ -105,7 +105,7 @@
     <item row="1" column="0" rowspan="4">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_motors">
        <attribute name="title">
@@ -201,8 +201,8 @@
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
-          <property name="model">
-           <string>haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve3</string>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve3</string>
           </property>
          </widget>
         </item>
@@ -217,8 +217,8 @@
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
-          <property name="model">
-           <string>haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve2</string>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve1</string>
           </property>
          </widget>
         </item>
@@ -233,25 +233,12 @@
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
-          <property name="model">
-           <string>haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve1</string>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve2</string>
           </property>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QToolButton" name="btn_LC_on">
-          <property name="minimumSize">
-           <size>
-            <width>40</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>ON</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="2">
+        <item row="2" column="3">
          <widget class="QToolButton" name="btn_NF_on">
           <property name="minimumSize">
            <size>
@@ -264,7 +251,7 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="4">
+        <item row="1" column="6">
          <spacer name="horizontalSpacer_2">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -297,19 +284,6 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="2">
-         <widget class="QToolButton" name="btn_CC_on">
-          <property name="minimumSize">
-           <size>
-            <width>40</width>
-            <height>40</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>ON</string>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label">
           <property name="text">
@@ -325,6 +299,32 @@
          </widget>
         </item>
         <item row="0" column="3">
+         <widget class="QToolButton" name="btn_CC_on">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QToolButton" name="btn_LC_on">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
          <widget class="QToolButton" name="btn_LC_off">
           <property name="minimumSize">
            <size>
@@ -337,7 +337,7 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="3">
+        <item row="0" column="4">
          <widget class="QToolButton" name="btn_CC_off">
           <property name="minimumSize">
            <size>
@@ -350,7 +350,7 @@
           </property>
          </widget>
         </item>
-        <item row="2" column="3">
+        <item row="2" column="4">
          <widget class="QToolButton" name="btn_NF_off">
           <property name="minimumSize">
            <size>
@@ -433,14 +433,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>TaurusLabel</class>
-   <extends>QLabel</extends>
-   <header>taurus.qt.qtgui.display</header>
-  </customwidget>
-  <customwidget>
    <class>QWebView</class>
    <extends>QWidget</extends>
    <header>QtWebKit/QWebView</header>
+  </customwidget>
+  <customwidget>
+   <class>TaurusLabel</class>
+   <extends>QLabel</extends>
+   <header>taurus.qt.qtgui.display</header>
   </customwidget>
  </customwidgets>
  <tabstops>
@@ -450,12 +450,7 @@
   <tabstop>btn_lightOff</tabstop>
   <tabstop>sld_lightSet</tabstop>
   <tabstop>tabWidget</tabstop>
-  <tabstop>btn_LC_on</tabstop>
-  <tabstop>btn_LC_off</tabstop>
-  <tabstop>btn_CC_on</tabstop>
-  <tabstop>btn_CC_off</tabstop>
   <tabstop>btn_NF_on</tabstop>
-  <tabstop>btn_NF_off</tabstop>
   <tabstop>wv_save</tabstop>
   <tabstop>wv_calc</tabstop>
  </tabstops>
