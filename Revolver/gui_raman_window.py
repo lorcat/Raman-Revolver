@@ -56,6 +56,7 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
     ATTR_LC = "Valve1"
     ATTR_CC = "Valve2"
     ATTR_NF = "Valve3"
+    ATTR_SH = "Valve4"
 
     FESTO_ON = 1
     FESTO_OFF = 0
@@ -375,6 +376,7 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
         self.actionLightOff()
         self.actionLCoff()
         self.actionCCoff()
+        self.actionSHoff()
 
     @QtCore.pyqtSlot()
     def actionPrepObservation(self):
@@ -389,6 +391,22 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
         self.actionLCon()
         self.actionCCon()
         self.actionLightOn()
+        self.actionSHon()
+
+    @QtCore.pyqtSlot()
+    def actionPrepAlignment(self):
+        """
+        Performing preparations for alignment adjustments
+        @return:
+        """
+        self.debug("Performing preparations for alignment adjustments")
+
+        # individial actions for observation
+        # switch on the light, move in the light and camera cubes
+        self.actionLCon()
+        self.actionCCon()
+        self.actionLightOn()
+        self.actionSHoff()
 
     def sliderToLight(self):
         """
@@ -464,6 +482,22 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
         """
         self.debug("Setting NF OFF")
         self.setPytangoRunner(self.FESTODEVICE, self.ATTR_NF, self.FESTO_OFF)
+
+    def actionSHon(self):
+        """
+        Inserts the shutter filter into the optical path
+        @return:
+        """
+        self.debug("Setting SH ON")
+        self.setPytangoRunner(self.FESTODEVICE, self.ATTR_SH, self.FESTO_ON)
+
+    def actionSHoff(self):
+        """
+        Removes the shutter filter from the optical path
+        @return:
+        """
+        self.debug("Setting SH OFF")
+        self.setPytangoRunner(self.FESTODEVICE, self.ATTR_SH, self.FESTO_OFF)
 
     def setPytangoRunner(self, device, attr, value):
         """

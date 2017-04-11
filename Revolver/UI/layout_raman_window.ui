@@ -27,17 +27,24 @@
        <string>Fast Controls</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_9">
-       <item row="0" column="0">
-        <widget class="QPushButton" name="btn_prepObserv">
-         <property name="text">
-          <string>Prep. Observation</string>
-         </property>
-        </widget>
-       </item>
        <item row="1" column="0">
         <widget class="QPushButton" name="btn_prepCollect">
          <property name="text">
-          <string>Prep. Collection</string>
+          <string>Prep. &amp;Collection</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QPushButton" name="btn_prepObserv">
+         <property name="text">
+          <string>Prep. &amp;Observation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="btn_prepAlign">
+         <property name="text">
+          <string>Prep. &amp;Alignment</string>
          </property>
         </widget>
        </item>
@@ -105,7 +112,7 @@
     <item row="1" column="0" rowspan="4">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_motors">
        <attribute name="title">
@@ -190,37 +197,38 @@
         <string>Optical Elements</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_10">
-        <item row="2" column="1">
-         <widget class="TaurusLabel" name="taurusLabel_3">
-          <property name="minimumSize">
+        <item row="4" column="1">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>100</width>
+            <width>20</width>
             <height>40</height>
            </size>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="model" stdset="0">
-           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve3</string>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Camera Cube</string>
           </property>
          </widget>
         </item>
-        <item row="1" column="1">
-         <widget class="TaurusLabel" name="taurusLabel_2">
-          <property name="minimumSize">
+        <item row="1" column="6">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
            <size>
-            <width>100</width>
-            <height>40</height>
+            <width>40</width>
+            <height>20</height>
            </size>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="model" stdset="0">
-           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve1</string>
-          </property>
-         </widget>
+         </spacer>
         </item>
         <item row="0" column="1">
          <widget class="TaurusLabel" name="taurusLabel">
@@ -251,36 +259,35 @@
           </property>
          </widget>
         </item>
-        <item row="1" column="6">
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
+        <item row="2" column="1">
+         <widget class="TaurusLabel" name="taurusLabel_3">
+          <property name="minimumSize">
            <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="3" column="1">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
+            <width>100</width>
             <height>40</height>
            </size>
           </property>
-         </spacer>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve3</string>
+          </property>
+         </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Camera Cube</string>
+        <item row="1" column="1">
+         <widget class="TaurusLabel" name="taurusLabel_2">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve1</string>
           </property>
          </widget>
         </item>
@@ -352,6 +359,55 @@
         </item>
         <item row="2" column="4">
          <widget class="QToolButton" name="btn_NF_off">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>OFF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="TaurusLabel" name="taurusLabel_4">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve4</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Shutter</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QToolButton" name="btn_SH_on">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>ON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QToolButton" name="btn_SH_off">
           <property name="minimumSize">
            <size>
             <width>40</width>
@@ -446,13 +502,21 @@
  <tabstops>
   <tabstop>btn_prepObserv</tabstop>
   <tabstop>btn_prepCollect</tabstop>
+  <tabstop>btn_prepAlign</tabstop>
   <tabstop>btn_lightOn</tabstop>
   <tabstop>btn_lightOff</tabstop>
   <tabstop>sld_lightSet</tabstop>
   <tabstop>tabWidget</tabstop>
+  <tabstop>btn_CC_on</tabstop>
+  <tabstop>btn_CC_off</tabstop>
+  <tabstop>btn_LC_on</tabstop>
+  <tabstop>btn_LC_off</tabstop>
   <tabstop>btn_NF_on</tabstop>
-  <tabstop>wv_save</tabstop>
+  <tabstop>btn_NF_off</tabstop>
+  <tabstop>btn_SH_on</tabstop>
+  <tabstop>btn_SH_off</tabstop>
   <tabstop>wv_calc</tabstop>
+  <tabstop>wv_save</tabstop>
  </tabstops>
  <resources/>
  <connections>
@@ -480,7 +544,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>867</x>
-     <y>178</y>
+     <y>207</y>
     </hint>
     <hint type="destinationlabel">
      <x>653</x>
@@ -496,7 +560,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>943</x>
-     <y>178</y>
+     <y>207</y>
     </hint>
     <hint type="destinationlabel">
      <x>733</x>
@@ -512,7 +576,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>891</x>
-     <y>202</y>
+     <y>231</y>
     </hint>
     <hint type="destinationlabel">
      <x>769</x>
@@ -559,8 +623,8 @@
    <slot>actionLCon()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>231</x>
-     <y>82</y>
+     <x>236</x>
+     <y>146</y>
     </hint>
     <hint type="destinationlabel">
      <x>223</x>
@@ -575,8 +639,8 @@
    <slot>actionLCoff()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>262</x>
-     <y>71</y>
+     <x>282</x>
+     <y>146</y>
     </hint>
     <hint type="destinationlabel">
      <x>269</x>
@@ -591,8 +655,8 @@
    <slot>actionCCon()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>228</x>
-     <y>123</y>
+     <x>236</x>
+     <y>100</y>
     </hint>
     <hint type="destinationlabel">
      <x>241</x>
@@ -607,8 +671,8 @@
    <slot>actionCCoff()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>263</x>
-     <y>131</y>
+     <x>282</x>
+     <y>100</y>
     </hint>
     <hint type="destinationlabel">
      <x>378</x>
@@ -648,6 +712,54 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_SH_on</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionSHon()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>222</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>662</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_SH_off</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionSHoff()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>274</x>
+     <y>213</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>424</x>
+     <y>664</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_prepAlign</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>actionPrepAlignment()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>913</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>908</x>
+     <y>655</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>processMenuAction()</slot>
@@ -662,5 +774,8 @@
   <slot>actionCCoff()</slot>
   <slot>actionNFon()</slot>
   <slot>actionNFoff()</slot>
+  <slot>actionSHon()</slot>
+  <slot>actionSHoff()</slot>
+  <slot>actionPrepAlignment()</slot>
  </slots>
 </ui>
