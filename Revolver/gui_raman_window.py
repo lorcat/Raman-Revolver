@@ -57,6 +57,7 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
     ATTR_CC = "Valve2"
     ATTR_NF = "Valve3"
     ATTR_SH = "Valve4"
+    ATTR_532_660 = "Valve5"
 
     FESTO_ON = 1
     FESTO_OFF = 0
@@ -108,6 +109,21 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
 
         # window title
         self.setWindowTitle(self.WINDOW_TITLE)
+
+        # by default set the 532nm
+        self.action532On()
+
+    def setTitle(self, appendix=None):
+        """
+        Sets the main window title
+        @param appendix:
+        @return:
+        """
+        string = self.WINDOW_TITLE
+        if appendix is not None:
+            string = "{} - {}".format(string, appendix)
+        self.setWindowTitle(string)
+
 
     def __init_events(self):
         self.debug("Initializing qt events for main window")
@@ -498,6 +514,26 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
         """
         self.debug("Setting SH OFF")
         self.setPytangoRunner(self.FESTODEVICE, self.ATTR_SH, self.FESTO_OFF)
+
+    def action660On(self):
+        """
+        Switches on the 660nm laser mode
+        @return:
+        """
+        self.debug("Setting 660nm ON")
+        self.setPytangoRunner(self.FESTODEVICE, self.ATTR_532_660, self.FESTO_ON)
+
+        self.setTitle(appendix="660nm")
+
+    def action532On(self):
+        """
+        Switches on the 532nm laser mode
+        @return:
+        """
+        self.debug("Setting 532nm ON")
+        self.setPytangoRunner(self.FESTODEVICE, self.ATTR_532_660, self.FESTO_OFF)
+
+        self.setTitle(appendix="532nm")
 
     def setPytangoRunner(self, device, attr, value):
         """

@@ -197,7 +197,7 @@
         <string>Optical Elements</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_10">
-        <item row="4" column="1">
+        <item row="6" column="1">
          <spacer name="verticalSpacer_3">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -216,19 +216,6 @@
            <string>Camera Cube</string>
           </property>
          </widget>
-        </item>
-        <item row="1" column="6">
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
         </item>
         <item row="0" column="1">
          <widget class="TaurusLabel" name="taurusLabel">
@@ -419,6 +406,80 @@
           </property>
          </widget>
         </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>532nm | 650nm</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="TaurusLabel" name="taurusLabel_5">
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="model" stdset="0">
+           <string>tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve5</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QPushButton" name="btn_532">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>532</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QPushButton" name="btn_650">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>40</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>660</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="5">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_calc">
@@ -515,6 +576,8 @@
   <tabstop>btn_NF_off</tabstop>
   <tabstop>btn_SH_on</tabstop>
   <tabstop>btn_SH_off</tabstop>
+  <tabstop>btn_532</tabstop>
+  <tabstop>btn_650</tabstop>
   <tabstop>wv_calc</tabstop>
   <tabstop>wv_save</tabstop>
  </tabstops>
@@ -760,6 +823,38 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_532</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>action532On()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>265</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>572</x>
+     <y>660</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_650</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>action660On()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>272</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>691</x>
+     <y>662</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>processMenuAction()</slot>
@@ -777,5 +872,7 @@
   <slot>actionSHon()</slot>
   <slot>actionSHoff()</slot>
   <slot>actionPrepAlignment()</slot>
+  <slot>action532On()</slot>
+  <slot>action660On()</slot>
  </slots>
 </ui>

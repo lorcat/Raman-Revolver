@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'layout_raman_window.ui'
 #
-# Created: Tue Apr 11 14:13:11 2017
+# Created: Wed Oct 17 13:22:07 2018
 #      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
@@ -112,12 +112,10 @@ class Ui_MainWindow(object):
         self.gridLayout_10 = QtGui.QGridLayout(self.tab_festo)
         self.gridLayout_10.setObjectName(_fromUtf8("gridLayout_10"))
         spacerItem3 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.gridLayout_10.addItem(spacerItem3, 4, 1, 1, 1)
+        self.gridLayout_10.addItem(spacerItem3, 6, 1, 1, 1)
         self.label_2 = QtGui.QLabel(self.tab_festo)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.gridLayout_10.addWidget(self.label_2, 1, 0, 1, 1)
-        spacerItem4 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
-        self.gridLayout_10.addItem(spacerItem4, 1, 6, 1, 1)
         self.taurusLabel = TaurusLabel(self.tab_festo)
         self.taurusLabel.setMinimumSize(QtCore.QSize(100, 40))
         self.taurusLabel.setAlignment(QtCore.Qt.AlignCenter)
@@ -179,6 +177,26 @@ class Ui_MainWindow(object):
         self.btn_SH_off.setMinimumSize(QtCore.QSize(40, 40))
         self.btn_SH_off.setObjectName(_fromUtf8("btn_SH_off"))
         self.gridLayout_10.addWidget(self.btn_SH_off, 3, 4, 1, 1)
+        self.label_5 = QtGui.QLabel(self.tab_festo)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.gridLayout_10.addWidget(self.label_5, 4, 0, 1, 1)
+        self.taurusLabel_5 = TaurusLabel(self.tab_festo)
+        self.taurusLabel_5.setMinimumSize(QtCore.QSize(100, 40))
+        self.taurusLabel_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.taurusLabel_5.setObjectName(_fromUtf8("taurusLabel_5"))
+        self.gridLayout_10.addWidget(self.taurusLabel_5, 4, 1, 1, 1)
+        self.btn_532 = QtGui.QPushButton(self.tab_festo)
+        self.btn_532.setMinimumSize(QtCore.QSize(40, 40))
+        self.btn_532.setMaximumSize(QtCore.QSize(40, 16777215))
+        self.btn_532.setObjectName(_fromUtf8("btn_532"))
+        self.gridLayout_10.addWidget(self.btn_532, 4, 3, 1, 1)
+        self.btn_650 = QtGui.QPushButton(self.tab_festo)
+        self.btn_650.setMinimumSize(QtCore.QSize(40, 40))
+        self.btn_650.setMaximumSize(QtCore.QSize(40, 16777215))
+        self.btn_650.setObjectName(_fromUtf8("btn_650"))
+        self.gridLayout_10.addWidget(self.btn_650, 4, 4, 1, 1)
+        spacerItem4 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.gridLayout_10.addItem(spacerItem4, 4, 5, 1, 1)
         self.tabWidget.addTab(self.tab_festo, _fromUtf8(""))
         self.tab_calc = QtGui.QWidget()
         self.tab_calc.setObjectName(_fromUtf8("tab_calc"))
@@ -233,6 +251,8 @@ class Ui_MainWindow(object):
         QtCore.QObject.connect(self.btn_SH_on, QtCore.SIGNAL(_fromUtf8("clicked()")), MainWindow.actionSHon)
         QtCore.QObject.connect(self.btn_SH_off, QtCore.SIGNAL(_fromUtf8("clicked()")), MainWindow.actionSHoff)
         QtCore.QObject.connect(self.btn_prepAlign, QtCore.SIGNAL(_fromUtf8("clicked()")), MainWindow.actionPrepAlignment)
+        QtCore.QObject.connect(self.btn_532, QtCore.SIGNAL(_fromUtf8("clicked()")), MainWindow.action532On)
+        QtCore.QObject.connect(self.btn_650, QtCore.SIGNAL(_fromUtf8("clicked()")), MainWindow.action660On)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         MainWindow.setTabOrder(self.btn_prepObserv, self.btn_prepCollect)
         MainWindow.setTabOrder(self.btn_prepCollect, self.btn_prepAlign)
@@ -248,7 +268,9 @@ class Ui_MainWindow(object):
         MainWindow.setTabOrder(self.btn_NF_on, self.btn_NF_off)
         MainWindow.setTabOrder(self.btn_NF_off, self.btn_SH_on)
         MainWindow.setTabOrder(self.btn_SH_on, self.btn_SH_off)
-        MainWindow.setTabOrder(self.btn_SH_off, self.wv_calc)
+        MainWindow.setTabOrder(self.btn_SH_off, self.btn_532)
+        MainWindow.setTabOrder(self.btn_532, self.btn_650)
+        MainWindow.setTabOrder(self.btn_650, self.wv_calc)
         MainWindow.setTabOrder(self.wv_calc, self.wv_save)
 
     def retranslateUi(self, MainWindow):
@@ -277,6 +299,10 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "Shutter", None))
         self.btn_SH_on.setText(_translate("MainWindow", "ON", None))
         self.btn_SH_off.setText(_translate("MainWindow", "OFF", None))
+        self.label_5.setText(_translate("MainWindow", "532nm | 650nm", None))
+        self.taurusLabel_5.setProperty("model", _translate("MainWindow", "tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve5", None))
+        self.btn_532.setText(_translate("MainWindow", "532", None))
+        self.btn_650.setText(_translate("MainWindow", "660", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_festo), _translate("MainWindow", "Optical Elements", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_calc), _translate("MainWindow", "Calculations Ruby", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_save), _translate("MainWindow", "Saving Positions", None))
