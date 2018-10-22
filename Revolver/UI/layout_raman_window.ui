@@ -242,7 +242,7 @@
            </size>
           </property>
           <property name="text">
-           <string>ON</string>
+           <string>532</string>
           </property>
          </widget>
         </item>
@@ -288,7 +288,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="label_3">
           <property name="text">
-           <string>Notch Filter</string>
+           <string>NF 532 | 660nm</string>
           </property>
          </widget>
         </item>
@@ -353,7 +353,7 @@
            </size>
           </property>
           <property name="text">
-           <string>OFF</string>
+           <string>660</string>
           </property>
          </widget>
         </item>
@@ -409,7 +409,7 @@
         <item row="4" column="0">
          <widget class="QLabel" name="label_5">
           <property name="text">
-           <string>532nm | 650nm</string>
+           <string>532nm | 660nm</string>
           </property>
          </widget>
         </item>

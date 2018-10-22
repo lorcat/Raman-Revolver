@@ -525,6 +525,9 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
 
         self.setTitle(appendix="660nm")
 
+        # insert 660nm Notch
+        self.actionNFoff()
+
     def action532On(self):
         """
         Switches on the 532nm laser mode
@@ -534,6 +537,10 @@ class RamanWindow(QtGui.QMainWindow, Tester, Ui_MainWindow):
         self.setPytangoRunner(self.FESTODEVICE, self.ATTR_532_660, self.FESTO_OFF)
 
         self.setTitle(appendix="532nm")
+
+        # insert 532nm Notch
+        self.actionNFon()
+
 
     def setPytangoRunner(self, device, attr, value):
         """

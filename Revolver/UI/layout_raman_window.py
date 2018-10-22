@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'layout_raman_window.ui'
 #
-# Created: Wed Oct 17 13:22:07 2018
+# Created: Mon Oct 22 18:16:04 2018
 #      by: PyQt4 UI code generator 4.11
 #
 # WARNING! All changes made in this file will be lost!
@@ -285,21 +285,21 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_motors), _translate("MainWindow", "Motors", None))
         self.label_2.setText(_translate("MainWindow", "Camera Cube", None))
         self.taurusLabel.setProperty("model", _translate("MainWindow", "tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve2", None))
-        self.btn_NF_on.setText(_translate("MainWindow", "ON", None))
+        self.btn_NF_on.setText(_translate("MainWindow", "532", None))
         self.taurusLabel_3.setProperty("model", _translate("MainWindow", "tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve3", None))
         self.taurusLabel_2.setProperty("model", _translate("MainWindow", "tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve1", None))
         self.label.setText(_translate("MainWindow", "Light Cube", None))
-        self.label_3.setText(_translate("MainWindow", "Notch Filter", None))
+        self.label_3.setText(_translate("MainWindow", "NF 532 | 660nm", None))
         self.btn_CC_on.setText(_translate("MainWindow", "ON", None))
         self.btn_LC_on.setText(_translate("MainWindow", "ON", None))
         self.btn_LC_off.setText(_translate("MainWindow", "OFF", None))
         self.btn_CC_off.setText(_translate("MainWindow", "OFF", None))
-        self.btn_NF_off.setText(_translate("MainWindow", "OFF", None))
+        self.btn_NF_off.setText(_translate("MainWindow", "660", None))
         self.taurusLabel_4.setProperty("model", _translate("MainWindow", "tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve4", None))
         self.label_4.setText(_translate("MainWindow", "Shutter", None))
         self.btn_SH_on.setText(_translate("MainWindow", "ON", None))
         self.btn_SH_off.setText(_translate("MainWindow", "OFF", None))
-        self.label_5.setText(_translate("MainWindow", "532nm | 650nm", None))
+        self.label_5.setText(_translate("MainWindow", "532nm | 660nm", None))
         self.taurusLabel_5.setProperty("model", _translate("MainWindow", "tango://haspllabcl1:10000/llab/ramanoptics/llabcl1.01/Valve5", None))
         self.btn_532.setText(_translate("MainWindow", "532", None))
         self.btn_650.setText(_translate("MainWindow", "660", None))
